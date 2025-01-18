@@ -1,0 +1,130 @@
+<html>
+    <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script>
+  var flag = 0;
+     function myfun()
+	 {
+		    var name=document.register.username.value;
+			var pwd=document.register.password.value;
+			var letters = /^[a-zA-Z\s]+$/;
+			var numbers = /[0-9]$/.test(pwd);
+			var checkSpecial = /[*@!#%&]+/.test(pwd);
+			var checkUpper = /[A-Z]+/.test(pwd);
+			var checkLower = /[a-z]+/.test(pwd);
+			
+			if(name==""|| name==null)
+			{
+				alert("Please enter your username");
+				document.register.username.focus();
+				return false;
+			}
+			if(name.length<6)
+			{
+				alert("Please enter minimun 6 charcters");
+				document.register.username.focus();
+				return false;
+			}
+			if(pwd==""|| pwd==null)
+			{
+					alert("Please enter your password");
+					document.register.password.focus();
+					return false;
+			}
+			if(checkSpecial && checkLower && checkUpper && numbers)
+			{
+				    flag = 1;
+			}
+			if(flag == 0)
+			{
+				alert("Password should be the combination of atleast one lowercase letter, uppercase letter,number & special symbols like ($, & #)");
+				document.register.password.focus();
+				return false;
+			}
+			
+			return true;
+     }
+  </script>
+        <style>
+
+ 
+            h1{
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: bolder;
+            }
+            body{
+                font-family:sans-serif;
+                font-size: 20;
+                background-image: url("https://plus.unsplash.com/premium_photo-1661490850780-180d3c21a074?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dHlwaW5nJTIwbGFwdG9wJTIwYmxhY2slMjBzaGFkZXxlbnwwfHwwfHx8MA%3D%3D");
+                background-size: cover;
+            }
+            i{
+                align-items: center;
+                color:antiquewhite;
+            }
+            .container
+            {
+                position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    padding: 40px;
+    border-style:groove;
+    border-color: rgb(61, 60, 58);
+    background-color: rgba(8, 0, 0, 0.5); /* Transparent background with slight opacity */
+    border-radius: 10px; /* Rounded corners for the form */
+    color: #fff; /* White text color for better visibility */
+            }
+            .login-form
+            {
+                margin-top:20px;
+            }
+            .login-form  label{
+                display:block;
+                margin-bottom:10px;
+            }
+            .login-form input{
+                width:100%;
+                padding:10px;
+                border:1px solid #ccc;
+                border-radius:5px;
+            }
+            button 
+            {
+	background-color: rgb(193, 119, 50);
+	color: #000000;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 20%;
+	font-size: 15px;
+	padding: 10px;
+    margin-right: 38px;
+    margin-left: 1.9cm;
+	
+            }
+        </style>
+        <title>LOGIN</title>
+    </head>
+    <body >
+        
+        
+        
+        <div class="container">
+            
+            <div class="login-form">
+                <h1 style="text-align:center">Login Form</h1>
+                <form name="register" onsubmit="return myfun();" action="login.jsp">
+                    <label>Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username">
+                    <br/><label>Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password"><br/>
+                    <br/><button name="submit">Submit</button><button name="reset">Reset</button><br>
+                    <br/><b style="font-size: 15px;font-weight: lighter;">No account?Click here to <a href="signup.html" style="color: #e17a7a;">Sign Up!!</a></b>
+                </form>
+            </div>
+        </div>
+        
+    </body>
+</html>

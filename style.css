@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+::selection{
+  color: #000;
+  background: #fff;
+}
+.menu .logo i{
+  color:aliceblue;
+  font-size:26px;
+}
+.logo i:hover{
+color:burlywood;
+}
+
+nav{
+  position: fixed;
+  background: #1b1b1b;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+}
+nav .menu{
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.menu .logo a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+.menu ul{
+  display: inline-flex;
+}
+.menu ul li{
+  list-style: none;
+  margin-left: 7px;
+}
+.menu ul li:first-child{
+  margin-left: 0px;
+}
+.menu ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.menu ul li a:hover{
+  background: #fff;
+  color: black;
+}
+.icons i {
+    margin-left: 20px;
+    font-size: 22px;
+    color:white;
+}
+.icons i:hover {
+    color: coral;
+}
+div.products .hemu
+{
+ background-color:black;
+  width:100%;
+  height:100px;
+  border-style: inset;
+  border-width: 6px;
+}
+.products
+{
+  background-color:#000;
+}
+.img{
+  background: url("https://img.freepik.com/free-vector/learning-concept-illustration_114360-6186.jpg?w=1060&t=st=1713272594~exp=1713273194~hmac=0981e19f47ad3d09c7cbc200fab670d0efc94a4439c717703f0949feebcac9cc")no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.img::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.p1 {
+    height: 200px;
+    width: 55%;
+    position: relative;
+    top: 230px;
+    background-color:midnightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img1{
+    height: 400px;
+    width: 350px;
+    padding: 5px;
+    background-color: aqua;
+    position: relative;
+    bottom: 2px;
+    transition-duration: 0.5s;
+}
+
+.img1:hover {
+    transform: scale(1.07);
+}
+.p2 {
+    height: 200px;
+    width: 55%;
+    position: relative;
+    top: 230px;
+    margin-left: 678px;
+    margin-top: 170px;
+    background-color:midnightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center{
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+.center .title{
+  color: #fff;
+  font-size: 50px;
+  font-weight: 600;
+}
+.center .sub_title{
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+}
+.center .btns{
+  margin-top: 20px;
+}
+.center .btns button{
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.center .btns button:first-child{
+  color: #fff;
+  background: none;
+}
+.btns button:first-child:hover{
+  background: white;
+  color: black;
+}
+footer{
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
